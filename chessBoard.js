@@ -21,16 +21,10 @@ let gridString = "";
 
 for (let i = 0; i < gridSize; i++) {
 	for (let j = 0; j < gridSize; j++) {
-		if (i % 2 == 0) {
-			if (j % 2 == 0) {
-				gridString += " ";
-			}
-			else gridString += "#";
+		if ((i + j) % 2 == 0) {
+			gridString += " ";
 		} else {
-			if (j % 2 == 0) {
-				gridString += "#";
-			}
-			else gridString += " ";
+			gridString += "#";
 		}
 	}
 	gridString += "\n";
