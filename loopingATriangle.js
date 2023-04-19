@@ -10,8 +10,6 @@ triangle:
 #######
 */
 
-let poundString = "";
-for (let i = 0; i < 7; i++) {
-	poundString += "#";
+for (let poundString = "#"; poundString.length < 8; poundString += "#") {
 	console.log(poundString);
 }
