@@ -26,4 +26,14 @@ function range(start, end) {
 	}
 	return nums; 
 }
-console.log(range(55,100));
+
+function sum(nums) {
+	sum = 0;
+	for (let item of nums) {
+		sum += item;
+	}
+	return sum;
+}
+
+console.log(range(2,10));
+console.log(sum(range(2,10)));
