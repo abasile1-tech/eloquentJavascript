@@ -20,8 +20,12 @@ function reverseArray (array) {
 }
 
 function reverseArrayInPlace (array) {
-	array = reverseArray (array);
-	return array;
+  for (let i = 0; i < Math.floor(array.length / 2); i++) {
+    let old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
 }
 
 let array1 = [1,2,3,4,5];
@@ -29,6 +33,7 @@ let array2 = reverseArray(array1);
 console.log("array1: ", array1);
 console.log("array2: ", array2);
 let array3 = [1,2,3,4,5,6,7,8,9,10];
+console.log("array3: ", array3);
 let array4 = reverseArrayInPlace(array3);
 console.log("array3: ", array3);
 console.log("array4: ", array4);
