@@ -20,4 +20,14 @@ function countBs (stringA) {
 	}
 	return num;
 }
+
+function countChar (stringA, charToCount) {
+	let num = 0;
+	for (let i = 0; i < stringA.length; i++) {
+		if (stringA[i] == charToCount) num++;
+	}
+	return num;
+}
+
 console.log(countBs("BBBaBaB"));
+console.log(countChar("BBBaBaB","B"));
