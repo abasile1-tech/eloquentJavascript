@@ -14,11 +14,7 @@ make use of this new function.
 */
 
 function countBs (stringA) {
-	let num = 0;
-	for (let i = 0; i < stringA.length; i++) {
-		if (stringA[i] == "B") num++;
-	}
-	return num;
+	return countChar(stringA, "B");
 }
 
 function countChar (stringA, charToCount) {
