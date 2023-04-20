@@ -19,21 +19,30 @@ old behavior. The function call range(1, 10, 2) should return [1, 3, 5, 7,
 produces [5, 4, 3, 2].
 */
 
-function range(start, end) {
+function range(start, end, step) {
 	nums = [];
-	for (let i = start; i <= end; i++) {
-		nums.push(i);
+	incr = step || 1;
+	if (incr >= 0) {
+		for (let i = start; i <= end; i += incr) {
+			nums.push(i);
+		}
+	} else if (incr < 0) {
+		for (let i = start; i >= end; i += incr) {
+			nums.push(i);
+		}
 	}
 	return nums; 
 }
 
-function sum(nums) {
-	sum = 0;
+function sum1(nums) {
+	sum2 = 0;
 	for (let item of nums) {
-		sum += item;
+		sum2 += item;
 	}
-	return sum;
+	return sum2;
 }
 
-console.log(range(2,10));
-console.log(sum(range(2,10)));
+console.log(range(1,10));
+console.log(sum1(range(1,10)));
+console.log(range(10,2,-2));
+console.log(sum1(range(10,2,-2)));
