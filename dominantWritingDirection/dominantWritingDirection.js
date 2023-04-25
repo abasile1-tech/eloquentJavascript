@@ -50,3 +50,7 @@ console.log(dominantDirection("Hello!"));
 // → ltr
 console.log(dominantDirection("Hey, مساء الخير"));
 // → rtl
+
+console.log(characterScript(121));
+
+console.log(countBy([1, 2, 3, 4, 5], n => n > 2));
