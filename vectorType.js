@@ -16,17 +16,11 @@ class Vec {
 	}
 	
 	plus(vector) {
-		let newX = this.x + vector.x;
-		let newY = this.y + vector.y;
-		let newVector = [newX, newY];
-		return newVector;
+		return new Vec(this.x + vector.x, this.y + vector.y);
 	}
 
 	minus(vector) {
-		let newX = this.x - vector.x;
-		let newY = this.y - vector.y;
-		let newVector = [newX, newY];
-		return newVector;
+		return new Vec(this.x - vector.x, this.y - vector.y);
 	}
 
 	get length() {
