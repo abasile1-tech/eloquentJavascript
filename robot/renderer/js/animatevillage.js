@@ -1,5 +1,7 @@
 // test: no
 
+var window = require('../../main.js');
+
 (function() {
   "use strict"
 
